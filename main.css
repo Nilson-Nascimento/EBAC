@@ -1,0 +1,12 @@
+h1{
+    color:red;
+}
+
+li:hover{
+    cursor:pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
