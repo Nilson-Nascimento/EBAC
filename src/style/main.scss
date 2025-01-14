@@ -1,0 +1,11 @@
+@use 'variable';
+
+body{
+    background-color:variable.$corPrincimpalBody;
+    h1{
+        color: variable.$corPrinpalH1;
+    }
+    img{
+        width:100px;
+    }
+}
