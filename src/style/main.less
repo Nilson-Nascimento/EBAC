@@ -1,0 +1,155 @@
+@import "mixin.less";
+@import "map.less";
+
+@tableSize:~"(max-width: 430px)";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background-color:#colors[backgrdColor]; //map
+}
+
+header{
+    background-color: #colors[backgrdColorHdr]; //map
+    position: sticky;
+    top: 0;
+    left: 0;
+    .container{
+        .layout-1(); //mixin
+        align-items: center;
+        padding: 8px 0;
+    }
+}
+
+.menu{
+    display: flex;
+    li{
+        margin-left: 24px;
+        a{
+            .linkButton() //mixin
+        }
+    }
+}
+
+section{ 
+    padding: 56px 0;
+    .products{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 25%);
+        column-gap: 12.5%;
+        row-gap: 4%;
+        width: 100%;
+        .product{
+            &-item{
+                text-align: center;
+
+                img{
+                    width: 80%;
+                    border-radius: 16px;
+                }
+    
+                h4{
+                    .productTitle() //mixin
+                }
+            }
+
+            &-button{
+                .linkButton(); //mixin
+                display: block;
+                background-color:#colors[backgrdColorBt];
+                padding: 8px 0;
+                border-radius: 13px;
+                margin-top: 8px;
+                &:hover{
+                    background-color:#colors[backgrdColorBtHv];
+                }
+            }
+        }
+    }
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.branding{
+    img{
+        width: 5%;
+    }
+}
+
+@media screen and (min-width:431px) and (max-width:767px){
+
+    body{
+        background-color:#colors[backgrdColor]; //map
+    }
+    .container{
+        max-width: 80%;
+    } 
+
+    .container{
+        .products{
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+            .product{
+                &-item{
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media @tableSize { 
+    body{
+        background-color:#colors[backgrdColor];
+    }
+    .container{
+        .products{
+            grid-template-columns: repeat(1, 97%);
+            column-gap: 3%;
+            .product{
+                &-item{
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+
+    header{
+        background-color:#colors[backgrdColorHdr]; //map
+        position: sticky;
+        top: 0;
+        left: 0;
+        .container{
+            display:block;
+            text-align: center;
+            padding: 8px 0;
+
+            .menu{
+                .layout-2(); //mixin
+                li{
+                    margin-left: 24px;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    
+    
+}
+// Teste css
