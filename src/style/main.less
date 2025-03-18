@@ -1,0 +1,78 @@
+// Color
+@colorBckGrd:#000;
+@ColorTxt:rgb(2, 135, 86);
+@colorBtt:#f7b731;
+
+// Font
+@fontMain:Roboto, sans-serife;
+@fontTitle:Lobster;
+
+
+body{
+    background-color: @colorBckGrd;
+    color:@ColorTxt;
+    font-family: @fontMain;
+}
+h1{
+    font-family: @fontTitle;
+    font-size: 3em;
+}
+
+main{
+    width: 100%;
+    max-width: 950px;
+    margin:0 auto;
+    text-align: center;
+    font-size: 2em;
+}
+
+button{
+    padding: 16px;
+    cursor: pointer;
+    font-weight: 1.3em;
+    margin-top: 16px;
+    border-radius: 8px;
+    color:@colorBckGrd;
+    background-color:@colorBtt;
+    font-family:@fontMain;
+}
+
+.input{
+    color: aqua;
+    width: 200px;
+    margin: 0 auto;
+
+    label{
+        margin: 16px auto 0;
+        font-size: 1em;
+        max-width: 120px;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        color: @ColorTxt;
+        border-bottom: 3px solid @colorBtt;
+    }
+
+    input{
+        margin: 16px auto 0;
+        font-size: 1em;
+        max-width: 120px;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        color: @ColorTxt;
+        border-bottom: 3px solid @colorBtt;
+    }
+}
+
+.result{
+    padding: 16px;
+    margin-top: 120px;
+    display: none;
+    span{
+        font-size: 100px;
+        border: 8px dotted @colorBtt;
+        display: block;
+        
+    }
+}
