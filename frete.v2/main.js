@@ -1,3 +1,5 @@
+// Ajax com Fetch API
+
 $(document).ready(function () {
     
     alert("Carregou!")
@@ -59,22 +61,31 @@ $(document).ready(function () {
                 $("#uf").val("...");
                 $("#ibge").val("...");
 
-                //Consulta o webservice viacep.com.br/
-                $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+                //Consulta o webservice viacep.com.br
 
-                    if (!("erro" in dados)) {
-                        //Atualiza os campos com os valores da consulta.
-                        console.log(dados.logradouro + ", " + dados.bairro + ", " + dados.localidade + "- " + dados.uf);
-                        $("#endereco").val(dados.logradouro + ", " + dados.bairro + ", " + dados.localidade + " - " + dados.uf);
-                        tagFind()
-                    } //end if.
-                    else {
-                        //CEP pesquisado não foi encontrado.
-                        limpa_formulário_cep();
-                        alert("CEP não encontrado.");
-                        tagFind()
-                    }
-                });
+                fetch("https://viacep.com.br/ws/" + cep + "/json/?callback=?").then( function (dados){
+
+                    console.log("Dados: " + dados)
+
+                    })
+
+
+
+                // $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+
+                //     if (!("erro" in dados)) {
+                //         //Atualiza os campos com os valores da consulta.
+                //         console.log(dados.logradouro + ", " + dados.bairro + ", " + dados.localidade + "- " + dados.uf);
+                //         $("#endereco").val(dados.logradouro + ", " + dados.bairro + ", " + dados.localidade + " - " + dados.uf);
+                //         tagFind()
+                //     } //end if.
+                //     else {
+                //         //CEP pesquisado não foi encontrado.
+                //         limpa_formulário_cep();
+                //         alert("CEP não encontrado.");
+                //         tagFind()
+                //     }
+                // });
             } //end if.
             else {
                 //cep é inválido.
