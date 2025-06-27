@@ -1,5 +1,5 @@
 :root {
-    --header-color: #01a3a4;
+    --header-color: #1d87cd;
     --bg-color: #eee;
 }
 
@@ -46,6 +46,10 @@ header .container {
 .profile-username {
     margin: 16px 0 32px;
     font-size: 1.1em;
+}
+
+.profile-bio{
+    margin: 10px 0 320x;
 }
 
 .profile-link {
