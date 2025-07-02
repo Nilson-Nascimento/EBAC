@@ -56,11 +56,16 @@ const pessoa = {
 
 console.log(pessoa.nome) // acessando com a notação (.)
 console.log(pessoa["nome"]) // Acessando por colchetes
+
 function exibeAtributo(nomeAtributo){
     console.log(pessoa[nomeAtributo])
 }
 
 exibeAtributo('nome')
+
+// Verificando se em um atributo existe um elemento
+
+ 
 
 // console.log(typeof nome)
 // console.log(typeof idade)
