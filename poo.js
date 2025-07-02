@@ -50,18 +50,78 @@ const habilidades = ["caça", "carpintaria"]
 
 const pessoa = {
     nome: nome,
-    idade: idade
+    idade: idade,
 }
+
+// Adicionando atributo ao objeto
+
+pessoa.sobrenome = "de Deus"
 
 
 console.log(pessoa.nome) // acessando com a notação (.)
 console.log(pessoa["nome"]) // Acessando por colchetes
 
+
+// Consulta dinâmica
 function exibeAtributo(nomeAtributo){
     console.log(pessoa[nomeAtributo])
 }
 
 exibeAtributo('nome')
+
+// Verificando se um atributo existe em um elemento. Podemos utilizar a notação ponto(.) ou o ([])
+//Por padrão o JS verifica se o atributo não é null ou undefined.
+
+if (pessoa.sobrenome){
+    console.log("Meu sobrenome é " + pessoa["sobrenomenome"])
+} 
+else {
+    console.log("Esse Atibuto não existe.")
+}
+
+if (pessoa["nome"]){
+    console.log("Meu nome é " + nome)
+}
+
+// Consulta com a palavra reservada in.
+
+if (pessoa.sobrenome in pessoa){
+    console.log("Eu tenho sobrenome ")
+}
+else {
+    console.log("Eu não tenho sobrenome ")
+}
+
+const debug = pessoa.sobrenome in pessoa
+console.log(debug)
+
+// Apesar de uma constante ter seus valores imutáveis, os atributos dentro dela são mutáveis.
+
+pessoa.nome = "Adão"
+
+console.log(pessoa.nome)
+
+// Para tornar imutável uma Constante utilizamos a palavra reservada Object.freeze
+
+Object.freeze(pessoa)
+
+pessoa.nome = "Abrão"
+console.log(pessoa.nome)
+
+
+// Transformando um array com os nomes dos atributos
+
+console.log(Object.keys(pessoa))
+console.log(Object.keys(pessoa).length)
+
+// Transformando um array com os valores dos atributos
+
+console.log(Object.values(pessoa))
+
+
+
+
+
 
 // Verificando se em um atributo existe um elemento
 
