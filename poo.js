@@ -41,3 +41,29 @@ const carroDeLeviV2 = new Carro("Ferrari", "Ferrari", 2030, 2030)
 
 console.log(carroDeGabrielV2)
 console.log(carroDeLeviV2)
+
+// ########################################################
+
+const nome = "Matuzalem"
+const idade = 938
+const habilidades = ["caça", "carpintaria"]
+
+const pessoa = {
+    nome: nome,
+    idade: idade
+}
+
+
+console.log(pessoa.nome) // acessando com a notação (.)
+console.log(pessoa["nome"]) // Acessando por colchetes
+function exibeAtributo(nomeAtributo){
+    console.log(pessoa[nomeAtributo])
+}
+
+exibeAtributo('nome')
+
+// console.log(typeof nome)
+// console.log(typeof idade)
+// console.log(typeof habilidades)
+
+// console.log(carroDeGabrielV2 instanceof Carro)
