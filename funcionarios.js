@@ -25,58 +25,101 @@
 // }
 
 // function Funcionario(cargo, salario){
-    
+
 //     this.cargo = cargo
 //     this.salario = salario
-
 
 //     this.dizCargo = function(nome){
 //         this.nome = nome
 //         console.log(this.nome, cargo + ", salário de " + salario)
 //     }
-    
-    
 //     Pessoa.call(this)
-    
 // }
 
 // ###############################  Encapsulamento #######################################
 
-function Pessoa (nome){
-    this.nome = nome
+// function Funcionario(nome, funcao, valor){
+//     this.colaborador = nome
+//     this.cargo = funcao
+//     let _salario = valor
+
+//     this.iniValor = function(){
+//         return _salario
+//     }
+
+//     this.getValor = function(){
+//         return `O${teste} salário de ${nome} é ${_salario}`
+//     }
+
+//     this.setValor = function(valor){
+//         _salario = valor
+//     }
+// }
+
+// console.log(funcionario1.getValor()) // Mostra o valor de R$ 7.000,00
+// funcionario1.setValor(70000) // Atribui um novo valor de R$ 10.0000,00
+
+
+
+
+
+//################ Polimorfismo ###########################################
+function Pessoa(nome, anos){
+    this.pessoa = nome
+    this.idade = anos
 }
 
-function Funcionario(nome, funcao, valor){
-    this.colaborador = nome
+function Funcionario(nome, idade, funcao, valor){
+    
+    // this.colaborador = nome 
+    Pessoa.call(this, nome, idade)
     this.cargo = funcao
-    // this.salario = valor
     let _salario = valor
 
     this.getValor = function(){
-        return `O${teste} salário de ${nome} é ${_salario}`
+        return _salario
     }
 
     this.setValor = function(valor){
         _salario = valor
     }
+
+    this.aumento = function(){ //Função polimorfica
+        const novoSal = this.getValor() * 1.1
+        this.setValor(novoSal)
+    }
+
+    console.log("Teste dentro de Funcionário")
 }
 
+function Estagiario(nome){
 
+    Funcionario.call(this, nome, 35, "Estagiário", 2000)
 
-const pessoa1 = new Pessoa("José")
-const funcionario1 = new Funcionario("Pedro", "Carpinteiro", "R$ 7.000,00")
-// const funcionario2 = new Funcionario("Pedro", "Pescador", 10000)
-const cargo = new Funcionario("Obreiro"," R$ 3.000,00")
-let teste = ""
+    this.aumento = function(){ //Função polimorfica
+        const novoSal = this.getValor() * 1.08
+        this.setValor(novoSal)
 
-console.log(pessoa1.nome)
-console.log(funcionario1.getValor()) // Mostra o valor de R$ 7.000,00
-funcionario1.setValor("R$ 10.0000,00") // Atribui um novo valor de R$ 10.0000,00
+        console.log(`${nome} receberá ${"R$ "+ novoSal + ",00"}`)
 
-if (funcionario1._salario === funcionario1.setValor()){
-    console.log("O teste deu certo")
+    }
 }
-console.log(funcionario1.getValor()) // Mostra o novo valor de R$ 10.0000,00
+
+// ############################ Objetos #########################################
+
+const pessoa1 = new Pessoa("José", "30")
+const funcionario1 = new Funcionario("Pedro", 30, "Carpinteiro", 70000)
+const funcionario2 = new Estagiario("Lucas")
+
+// const cargo = new Funcionario("Obreiro"," R$ 3.000,00")
+// console.log(funcionario1.iniValor())
+
+funcionario1.aumento()
+console.log(funcionario1.getValor())
+
+
+funcionario2.aumento()
+console.log(funcionario2.getValor())
 
 // cargo.dizCargo()
 // cargo.dizOi(this.nome)
