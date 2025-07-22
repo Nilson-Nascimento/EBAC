@@ -1,17 +1,31 @@
-function Person(firstN, year){
+function Person(firstN, year, place, state, skill){
     this.name = firstN
     this.age = year
+
+    Live.call(this, place, state)
+    Professional.call(this, skill)
+    
+    this.bio = function(){
+        return this.name + ", tem " + this.age + " anos" + " ele é " + skill + " vive em " + place
+    }
 }
 
-function Professional(firstN, skill, year){
+function Professional(skill){
     this.toDo = skill
-
-    Person.call(this, firstN, year)
 }
 
-const joao = new Person("João" , 18)
+function Live(place, state){
+    this.coutryLive = place 
+    this.stateLive = state
+}
 
-const pedro = new Professional("Pedro", "Pescador", 28)
+const joao = new Person("João" , 18, "Brasil", "Bahia", "Carpinteiro")
+const pedro = new Person("Pedro", 23,  "Israel", "Belém", "Pescador" )
+const mateus = new Person("Mateus", 21, "Itália", "Madrid", "Contador")
 
-console.log(joao.age)
+
+console.log(joao)
 console.log(pedro)
+console.log(joao.bio())
+console.log(pedro.bio())
+console.log(mateus.bio())
