@@ -1,3 +1,7 @@
+// Map
+console.log("################## Map #####################")
+
+
 const myMap = new Map()
 
 myMap.set("altura", "1,70 m")
@@ -63,3 +67,81 @@ for (let valores of myMapIterator.values()){
         // front-end
         // desenvolvedor
         // Canadá
+
+
+
+// Mostrando a Estrutura do Map
+
+for (let valores_2 of myMapIterator.entries()){
+    console.log(valores_2)
+}
+
+    // Expected output:
+        // [ 'estuduar', 'front-end' ]
+        // [ 'trabalhar', 'desenvolvedor' ]
+        // [ 'Pais', 'Canadá' ]
+
+// Desestruturação do Map
+
+for (let [chave, valor] of myMapIterator.entries()){
+    console.log("Chave:",chave,"| Valor:",valor)
+    console.log(`Chave: ${chave} | Valor: ${valor}`)
+}
+
+    // Expected output:
+
+        // Chave: estuduar | Valor: front-end
+        // Chave: estuduar | Valor: front-end
+        // Chave: trabalhar | Valor: desenvolvedor
+        // Chave: trabalhar | Valor: desenvolvedor
+        // Chave: Pais | Valor: Canadá
+        // Chave: Pais | Valor: Canadá
+
+// Deletando um item do Map
+
+myMapIterator.delete("trabalhar")
+console.log(myMapIterator)
+
+    // Expected output:
+    // Map(2) { 'estuduar' => 'front-end', 'Pais' => 'Canadá' }
+
+console.log(" ")
+console.log("################## Set #####################")
+console.log(" ")
+// Set
+
+// A estrutura do set é mais rígida, não tem o conjuto de chave e valor e os valores de um set não podem de repetir.
+
+// CRIANDO UM SET
+
+const cpf = new Set()
+
+cpf.add("416.624.695-00")
+cpf.add("852.775.805-90")
+cpf.add("156.374.975-08")
+
+console.log(cpf)
+console.log(cpf.keys())
+console.log(cpf.values())
+
+cpf.forEach((i) => {
+    console.log(i)
+})
+
+// Filtrando valores únicos em um array com set
+
+const names = ["Pedro", "Maria", "João", "Rute" , "Pedro", "Maria"]
+
+names.filter((x) => {
+    console.log(x)
+})
+
+const namesFilterSet = new Set([...names])
+
+console.log(namesFilterSet)
+
+// Transformando um Set em um Array com Spread
+
+const namesFilterArray = [...namesFilterSet]
+
+console.log(namesFilterArray)
