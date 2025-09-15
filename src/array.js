@@ -15,7 +15,7 @@ for(let i = 0; i < redeSociais.length; i++ ){
 }
 
 // Usando forEach
-console.log("##################### forEach ###############################")
+console.log("##################### forEach ######################")
 redeSociais.forEach(function(redeSocial, indice){
         console.log(`nº${indice} Eu tenho perfil na rede social: ${redeSocial}`)
 
@@ -23,7 +23,7 @@ redeSociais.forEach(function(redeSocial, indice){
 
 // Usando o map
 
-console.log("##################### map ###############################")
+console.log("####################### map ########################")
 
 const alunos = ["Pedro", "José", "Maria", "Rute"]
 
@@ -46,7 +46,7 @@ const summer = num.map(function(sum){
 
 console.log(summer)
 
-console.log("##################### find ###############################")
+console.log("###################### find ########################")
 
 
 const finder = listaAlunos.find(function(item){
@@ -146,4 +146,28 @@ const reduceListaAlunos = listaAlunos.reduce(function(acumuler, actualValues){
 }, '')
 
 console.log(reduceListaAlunos)
+
+console.log("##### Outros exemplos #####")
+
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
+
+let fLen = fruits.length
+console.log("Na primeira lista temos " + fLen + " Frutas")
+
+fruits.push("Lemon")
+fruits.push("Tomato")
+fruits[fruits.length] = "Uva"
+
+fLen = fruits.length
+console.log("Na segunda lista tem " + fLen + " Frutas, após adcionarmos mais frutas")
+
+let text = [];
+for (let i = 0; i < fruits.length ; i++) {
+    text.push(fruits[i]) ;
+    
+}
+
+console.log("Lista de Frutas de text: " , text)
+console.log("Lista de Frutas de fruits: ", fruits)
+
 

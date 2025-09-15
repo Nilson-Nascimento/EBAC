@@ -179,7 +179,7 @@ class Pikachu extends Pokemon{
     }
     
     status(){
-        console.log(`Status de ${this.name}:[Último ataque: ${this.atackName} | Nível de Vida: ${this.hp}% ]`)
+        console.log(`Status de ${this.name}:[Último ataque: ${this.atackName} | Nível de Vida: ${this.#hp}% ]`)
     }
 }
 
