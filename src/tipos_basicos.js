@@ -39,4 +39,15 @@ let personAge = 25;
 console.log(personAge);
 personAge = '25 age';
 console.log(personAge);
+// Type Any
+console.log("##### Type Any #####");
+let anyDados = 'Uma string';
+anyDados = 10;
+anyDados = true;
+anyDados = [1, 'string', true];
+// Tipagens em funções
+console.log("##### Tipagem em funções #####");
+function sumNumbers(n1, n2) {
+    return n1 + n2;
+}
 //# sourceMappingURL=tipos_basicos.js.map

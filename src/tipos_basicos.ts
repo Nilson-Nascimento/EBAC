@@ -65,3 +65,11 @@ let anyDados: any = 'Uma string'
 anyDados = 10
 anyDados = true
 anyDados = [1,'string', true]
+
+// Tipagens em funções
+
+console.log("##### Tipagem em funções #####")
+
+function sumNumbers(n1: number, n2: number): number{
+    return n1 + n2
+}
