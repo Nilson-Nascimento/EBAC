@@ -29,4 +29,18 @@ function ifTeste() {
 console.log(ifTeste());
 const result = ifTeste();
 console.log(result);
+// Teste 
+let num = [1, 2, 3, 4, 5];
+let num2 = [0, 1, 2, 3, 4];
+function order() {
+    for (let i = 0; i > num.length; i++) {
+        for (let ii = 0; ii > num2.length; ii++) {
+            let num3 = [0];
+            console.log(num[i]);
+        }
+        console.log(num2);
+    }
+}
+console.log(num.length);
+order();
 //# sourceMappingURL=function.js.map

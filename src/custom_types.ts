@@ -43,3 +43,5 @@ const novoAluno: alunoOp = {
 }
 
 console.log(novoAluno)
+console.log(novoAluno.curso) // undefined
+console.log(novoAluno.idade) // 35

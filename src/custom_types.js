@@ -24,4 +24,6 @@ const novoAluno = {
     // curso, pode ser omitido ao criar o objeto
 };
 console.log(novoAluno);
+console.log(novoAluno.curso); // undefined
+console.log(novoAluno.idade); // 35
 //# sourceMappingURL=custom_types.js.map
