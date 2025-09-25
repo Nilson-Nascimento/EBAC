@@ -13,4 +13,6 @@ namespace casting {
     
     let name: string = 35 as unknown as string
     console.log(name)
+    
+    
 }
