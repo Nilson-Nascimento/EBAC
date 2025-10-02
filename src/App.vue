@@ -1,6 +1,7 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
+import Cond_style from './components/cond_style.vue'
 import dados from './components/dados.vue'
 
 import {ref} from 'vue'
@@ -90,6 +91,10 @@ const disableButton = true
     </h1>
   </div>
   
+  <div class="cond_Style">
+    <Cond_style/>
+  </div>
+
 </template>
 
 
