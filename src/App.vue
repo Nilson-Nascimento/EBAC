@@ -3,6 +3,7 @@
 // import TheWelcome from './components/TheWelcome.vue'
 import Cond_style from './components/cond_style.vue'
 import dados from './components/dados.vue'
+import List_render from './components/list_render.vue'
 
 import {ref} from 'vue'
 
@@ -93,6 +94,10 @@ const disableButton = true
   
   <div class="cond_Style">
     <Cond_style/>
+  </div>
+
+  <div>
+    <List_render/>
   </div>
 
 </template>
