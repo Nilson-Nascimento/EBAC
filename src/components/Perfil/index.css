@@ -1,0 +1,38 @@
+body{
+    place-items: center;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+p{
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+h1,
+h2, 
+img,
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
