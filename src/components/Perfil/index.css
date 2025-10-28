@@ -15,14 +15,16 @@ img{
 }
 
 p{
-    margin-bottom: 40px;
-    padding: 0 20px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1,
 h2, 
-img,
-p{
+img{
     display: flex;
     justify-content: center;
     align-items: center;
