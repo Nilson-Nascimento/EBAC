@@ -12,14 +12,15 @@ function App() {
        <div className='encapsuling-div'>
             <Perfil
                 nome="Nilson Nascimento"
-                avatarGithub="https://github.com/Nilson-Nascimento.png"
-            />
+                avatarGithub={`https://github.com/Nilson-Nascimento.png`}
+                />
 
             <ReposList/>
             {/* <Form /> */}
             {/* {formVisible && <Form/>} Renderiza o componente Form apenas se formVisible for true */}
-            {formVisible && (<Form/>)} {/* Outra forma de renderizar condicionalmente o componente Form */}
-            <button type='button' onClick={() => setFormVisible(!formVisible)}>Toggle Form</button>
+            {/* {formVisible && (<Form/>)} Outra forma de renderizar condicionalmente o componente Form */}
+            {/* <button type='button' onClick={() => setFormVisible(!formVisible)}>Toggle Form</button> */}
+            
         </div>    
     )
 }

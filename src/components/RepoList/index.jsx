@@ -39,11 +39,16 @@ const ReposList = () => {
                     </li>
                 ))} */}
                 {/* Method 3 - Desestrutuction */}
-                {repos.map(({id, name, html_url, language}) => (
+                {repos.map(({id, name, html_url, language, owner}) => (
                     <li key={id}>
                         <p>
                             <b>Nome:</b> <a target="_blank" href={html_url}>{name}</a>
                             <b>Linguagem: </b>{language ? language: 'N/A'}
+                            {/* {owner.login}
+                            {owner.id}
+                            {owner.avatar_url && (
+                                <img src={owner.avatar_url} alt={`${owner.login} avatar`} width="50" />
+                            )} */}
                         </p>
                     </li>
                 ))}
