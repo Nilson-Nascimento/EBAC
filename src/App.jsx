@@ -7,21 +7,39 @@ import ReposList from './components/RepoList';
 
 function App() {
     const [formVisible, setFormVisible] = useState(false);
-    
-    return (
-       <div className='encapsuling-div'>
-            <Perfil
-                nome="Nilson Nascimento"
-                avatarGithub={`https://github.com/Nilson-Nascimento.png`}
-                />
+    const [userName, setUserName] = useState("");
 
-            <ReposList/>
-            {/* <Form /> */}
-            {/* {formVisible && <Form/>} Renderiza o componente Form apenas se formVisible for true */}
-            {/* {formVisible && (<Form/>)} Outra forma de renderizar condicionalmente o componente Form */}
-            {/* <button type='button' onClick={() => setFormVisible(!formVisible)}>Toggle Form</button> */}
+    return (
+        <div className='encapsuling-div'>
             
-        </div>    
+            <p>Digite seu Perfil Github:
+                <input type="text" onBlur={(e) => setUserName(e.target.value)} />
+            </p>
+
+            {userName &&
+
+                (
+                    <div>
+                        <Perfil
+                            nome={userName.split(2)}
+                            avatarGithub={`https://github.com/${userName}.png`}
+                        />
+
+                        <ReposList
+                            userName={userName}
+                            serverUrl={`https://api.github.com/users/${userName}/repos`}
+                        />
+                        {/* <Form /> */}
+                        {/* {formVisible && <Form/>} Renderiza o componente Form apenas se formVisible for true */}
+                        {/* {formVisible && (<Form/>)} Outra forma de renderizar condicionalmente o componente Form */}
+                        {/* <button type='button' onClick={() => setFormVisible(!formVisible)}>Toggle Form</button  > */}
+                    </div>
+                )
+            }
+
+            { }
+
+        </div>
     )
 }
 

@@ -1,0 +1,28 @@
+.list{
+    display: grid; /*Estabelece um layout de grade para o contêiner*/
+    grid-template-columns: 1fr 1fr 1fr; /*Define três colunas de largura igual*/
+    gap: 16px; /*Separador entre os items*/
+}
+
+.listItem{
+    list-style: none;
+    padding: 16px;
+    border: 1px solid rgb(0, 0, 0, 0.1); /*Cor da borda com transparência*/
+    border-radius: 8px; /*Arredondamento dos cantos*/
+}
+
+.itemName b, .itemLanguage b {
+    color:var(--text-secondary-color);
+    margin-right: 8px;
+
+}
+.itemLink{
+    display: block; /*Transforma o link em um bloco para ocupar toda a largura disponível*/
+    background-color:var(--primary-color);
+    color:var(--text-secondary-color);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin: 8px 0;
+    text-decoration: none;
+}

@@ -13,8 +13,8 @@ const Perfil = ({nome, avatarGithub}) => {
     return (
         <header className={styles.header}>
             {/* {JSON.stringify(props)} Exibe o nome do usuário em formato JSON. */}
-            <h1
-            className="logo-spin">Desenvolvedor Full Stack Java</h1> {/* Título principal exibido em um elemento h1. Em React */}
+            {/* <h1
+            className={styles.name}>Desenvolvedor Full Stack Java</h1> Título principal exibido em um elemento h1. Em React */}
             <h2 >{nome}</h2> {/* Nome do usuário exibido em um elemento h2. */}
             <img className={styles.avatar} src={avatarGithub} />{/* Imagem do avatar do GitHub. Em src não é necessário as "" duplas*/ }
             {/* <p>Olá 👋 Eu Sou Nilson Nascimento
